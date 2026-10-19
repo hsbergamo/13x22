@@ -283,6 +283,15 @@ function processarFrame() {
   tocarSom(numeroFinal);
 
   cv.imshow(outputCanvas, src);
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    outputCanvas.style.width = "100%";
+    outputCanvas.style.maxWidth = "100%";
+    outputCanvas.style.height = "auto";
+  } else {
+    outputCanvas.style.width = "";
+    outputCanvas.style.maxWidth = "";
+    outputCanvas.style.height = "";
+  }
   src.delete();
 }
 
