@@ -9,7 +9,12 @@
     canvas { max-width:90vw; max-height:80vh; border:5px solid #333; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.4); }
     button { padding:10px 20px; font-size:16px; cursor:pointer; }
     #status { font-size:14px; color:#aaa; }
-    @media (max-width:768px){ canvas { width:100%; height:auto; } }
+    @media (max-width:768px){ body{margin:0;} .container{width:100vw;height:100vh;gap:0;padding:0 } canvas {
+  width: 100%;
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain; /* alguns browsers suportam em canvas */
+}   }
   </style>
 </head>
 <body>
