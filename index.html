@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>13ou22</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; text-align:center; background:#111; color:#eee; overflow:hidden; }
+    .container { width:100vw; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; }
+    canvas { max-width:90vw; max-height:80vh; border:5px solid #333; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.4); }
+    button { padding:10px 20px; font-size:16px; cursor:pointer; }
+    #status { font-size:14px; color:#aaa; }
+    @media (max-width:768px){ canvas { width:100%; height:auto; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <canvas id="output"></canvas>
+    <div>
+      <button id="startBtn">Iniciar camera</button>
+      <span id="status">Carregando OpenCV.js e MediaPipe...</span>
+    </div>
+  </div>
+  <video id="video" autoplay playsinline style="display:none;"></video>
+  <script src="https://docs.opencv.org/4.x/opencv.js" async></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
